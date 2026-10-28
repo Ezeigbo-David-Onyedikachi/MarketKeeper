@@ -1,9 +1,23 @@
 {
-  "name": "shopledger",
-  "version": "1.0.0",
+  "name": "market-keeper",
   "private": true,
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "python3 -m http.server 3000 --bind 0.0.0.0",
-    "build": "mkdir -p dist && cp index.html styles.css app.js sw.js public/manifest.webmanifest public/manus-routes.json dist/"
+    "dev": "vite --host 0.0.0.0 --port 3000",
+    "build": "tsc && vite build",
+    "lint": "tsc --noEmit",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
   }
 }
